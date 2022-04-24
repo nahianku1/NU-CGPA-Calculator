@@ -112,26 +112,17 @@ document.addEventListener("change", function (e) {
 })
 
 function oldmain(target) {
-    // console.log(target);
     let mainid = target.closest('.main-section')
-    console.log(mainid);
     epsobj = {}
     creditobj = {}
     let mainsec = target.closest('.main-section').children.length - 2
-    console.log(mainsec);
     for (let i = 1; i <= mainsec; i++) {
-        // console.log(i);
-        console.log(mainid);
-        // let subcode = document.getElementById(mainid).children[i].children[0].value
-        let grade = mainid.children[i].children[1].value == 'Grade'? 0 : mainid.children[i].children[1].value
-        console.log(grade);
+        let grade = mainid.children[i].children[1].value == 'Grade' ? 0 : mainid.children[i].children[1].value
         let credit = mainid.children[i].children[2].value || 0
-        console.log(credit);
         let eps = parseFloat(grade) * parseFloat(credit)
         epsobj[i] = eps
         creditobj[i] = parseInt(credit)
-        console.log(epsobj);
-        console.log(creditobj);
+       
 
     }
 }
@@ -140,37 +131,22 @@ document.addEventListener("keyup", function (e) {
     if (e.target.id === e.target.previousElementSibling.id) {
 
         if (!mainarr.includes(e.target.parentElement.parentElement.id)) {
-            console.log('new main');
             oldmain(e.target);
-            // epsobj = {}
-            // creditobj = {}
+           
         } else if (mainarr.includes(e.target.parentElement.parentElement.id)) {
-            console.log('old main');
             oldmain(e.target);
         }
         mainarr.push(e.target.parentElement.parentElement.id)
-        // let eps = e.target.value * e.target.previousElementSibling.value;
-        // epsobj[e.target.id] = eps;
-        // console.log(epsobj);
-        // creditobj[e.target.id] = parseInt(e.target.value);
-        // console.log(creditobj);
-        
         let totalp = Object.values(epsobj).reduce((a, b) => a + b, 0)
         ttps[e.target.parentElement.parentElement.id] = totalp;
         let totaltps = Object.values(ttps).reduce((a, b) => a + b, 0)
-        console.log(totaltps);
         let totalc = Object.values(creditobj).reduce((a, b) => a + b, 0)
         totalcredit[e.target.parentElement.parentElement.id] = totalc;
         let totalcre = Object.values(totalcredit).reduce((a, b) => a + b, 0)
-        console.log(totalcre);
-        console.log(totalp);
-        console.log(totalc);
+      
         let gpa = totalp / totalc;
-        console.log(gpa.toFixed(2));
         e.target.parentElement.parentElement.lastElementChild.children[0].children[1].innerHTML = gpa.toFixed(2);
-        // console.log(e.target.parentElement.parentElement.lastElementChild);
         let cgpa = totaltps / totalcre;
-        console.log(cgpa.toFixed(2));
         document.querySelector(".cgpa").innerHTML = cgpa.toFixed(2);
     }
 
@@ -180,36 +156,21 @@ document.addEventListener("change", function (e) {
     if (e.target.id === e.target.nextElementSibling.id) {
 
         if (!mainarr.includes(e.target.parentElement.parentElement.id)) {
-            console.log('new main');
             oldmain(e.target);
-            // epsobj = {}
-            // creditobj = {}
         } else if (mainarr.includes(e.target.parentElement.parentElement.id)) {
-            console.log('old main');
             oldmain(e.target);
         }
         mainarr.push(e.target.parentElement.parentElement.id)
-        // let eps = e.target.value * e.target.previousElementSibling.value;
-        // epsobj[e.target.id] = eps;
-        // console.log(epsobj);
-        // creditobj[e.target.id] = parseInt(e.target.value);
-        // console.log(creditobj);
-       
         let totalp = Object.values(epsobj).reduce((a, b) => a + b, 0)
         ttps[e.target.parentElement.parentElement.id] = totalp;
         let totaltps = Object.values(ttps).reduce((a, b) => a + b, 0)
-        console.log(totaltps);
         let totalc = Object.values(creditobj).reduce((a, b) => a + b, 0)
         totalcredit[e.target.parentElement.parentElement.id] = totalc;
         let totalcre = Object.values(totalcredit).reduce((a, b) => a + b, 0)
-        console.log(totalcre);
-        console.log(totalp);
-        console.log(totalc);
+      
         let gpa = totalp / totalc;
-        console.log(gpa.toFixed(2));
         e.target.parentElement.parentElement.lastElementChild.children[0].children[1].innerHTML = gpa.toFixed(2);
         let cgpa = totaltps / totalcre;
-        console.log(cgpa.toFixed(2));
         document.querySelector(".cgpa").innerHTML = cgpa.toFixed(2);
     }
 

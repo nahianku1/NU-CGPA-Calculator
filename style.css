@@ -59,6 +59,12 @@ body h4{
     margin-bottom: 20px;
     border: none;
     outline: 1px solid #ccc;
+    background: transparent;
+    color: rgb(99, 96, 96);
+}
+
+.content-body input::placeholder  {
+    color: rgb(99, 96, 96);
 }
 
 .content-body select{
@@ -67,6 +73,8 @@ body h4{
     margin-bottom: 20px;
     border: none;
     outline: 1px solid #ccc;
+    background: transparent;
+    color: rgb(99, 96, 96);
 }
 
 .content-footer{
