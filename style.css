@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#ff7675,#74b9ff);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+body h4{
+    color: white;
+}
+.card > h4{
+    color:white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card{
+    width:auto;
+    height: auto;
+    border: 1px solid rgba(255,255,255,0.3);
+    background:rgba(255,255,255,0.1);
+    border-radius: 16px;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+    
+}
+
+.main-section .content-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.content-body{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.content-body input{
+    height: 40px;
+    padding:10px;
+    margin-bottom: 20px;
+    border: none;
+    outline: 1px solid #ccc;
+}
+
+.content-body select{
+    height: 40px;
+    padding:10px;
+    margin-bottom: 20px;
+    border: none;
+    outline: 1px solid #ccc;
+}
+
+.content-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.content-footer button{
+    padding: 8px;
+    border: none;
+    outline: 1px solid white;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sub-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.sub-section button{
+    padding: 8px;
+    border: none;
+    outline: 1px solid white;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.main-close{
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    background: transparent;
+    border-radius: 10%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    
+}
+
+.row-close{
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    background: transparent;
+    border-radius: 10%;
+    border: none;
+    outline: none;
+    padding: 2.5px;
+    margin-left: 10px;
+    align-self: center;
+}
+
+@media screen and (max-width:488px){
+    .card{
+        width: 350px;
+    }
+    .content-body input{
+        width: 40%;
+    }
+}
+@media screen and (max-width:356px){
+    .card{
+        width: 300px;
+    }
+    .content-body input{
+        width: 30%;
+    }
+}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="card">
+            <h4>National University GPA/CGPA Calculator</h4>
+            <div class="content-section">
+                <div class="main-section" id="1">
+
+                    <div class="content-heading">
+                        <h4>Year <span class="head-year">1</span></h4>
+                        <!-- <button class="main-close"><i class="fa-solid fa-trash-can"></i></button> -->
+                    </div>
+
+
+
+
+                    <div class="content-body">
+
+                        <input type="text" placeholder="Subject Code">
+                        <select class="gpa-calculator__grate grades-1" name="grade" id="1">
+                            <option >Grade</option>
+                            <option value="4.0">A+</option>
+                            <option value="3.75">A</option>
+                            <option value="3.50">A-</option>
+                            <option value="3.25">B+</option>
+                            <option value="3.0">B</option>
+                            <option value="2.75">B-</option>
+                            <option value="2.50">C+</option>
+                            <option value="2.25">C</option>
+                            <option value="2.0">D</option>
+                            <!-- <option value="0.0">F</option> -->
+                        </select>
+                        <input type="number" placeholder="Credit" id="1" disabled>
+                        <button class="row-close close"><i class="fa-solid fa-trash-can close"></i></button>
+
+
+                    </div>
+
+                    <div class="content-footer">
+                        <h4>Year <span class="foot-year">1</span> GPA : <span class="gpa">0.00</span></h4>
+                        <button class="add-subject">Add Subject</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <button id="add-year">Add Year</button>
+                <h4 >Your CGPA :<span class="cgpa"> 0.00</span> </h4>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
