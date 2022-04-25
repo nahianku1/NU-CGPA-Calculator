@@ -176,3 +176,12 @@ document.addEventListener("change", function (e) {
 
 })
 
+document.addEventListener("click", function (e) {
+    console.log(e.target);
+    if(e.target.id=='print'){
+        // let print = document.querySelector(".print")
+        e.target.style.display = "none"
+        window.print()
+        e.target.style.display = "block"
+    }
+})
