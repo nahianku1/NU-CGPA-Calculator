@@ -54,7 +54,7 @@ addyear.addEventListener("click", function () {
     </div>
 
     <div class="content-footer">
-        <h4>Year <span class="foot-year">${num}</span> GPA : <span class="gpa">2.79</span></h4>
+        <h4>Year <span class="foot-year">${num}</span> GPA : <span class="gpa">0.00</span></h4>
         <button class="add-subject">Add Subject</button>
     </div>
 </div>`
